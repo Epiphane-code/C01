@@ -4,7 +4,6 @@
 condition=0
 while [ $condition -eq 0 ] 
 do
-echo "Entrez le nom du dossier"
 read dossier
 echo ""
 if [ -d $dossier ]; then
