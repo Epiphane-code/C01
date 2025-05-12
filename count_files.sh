@@ -1,4 +1,5 @@
 #!/bin/bash
 dossier=$(basename "$(pwd)")
+nombre=$( ls -l | grep ^- | wc -l )
 echo "$dossier"
-echo "Le dossier $dossier contient $(ls -l | grep ^- | wc -l) fichiers(s)."
+echo "Le dossier $dossier contient $nombre fichiers(s)."
