@@ -1,3 +1,4 @@
 #!/bin/bash
-pwd
-echo "Le dossier $(pwd) contient $(ls -l | grep ^- | wc -l) fichiers(s)."
+basename "$(pwd)"
+dossier=$(basename "$(pwd)")
+echo "Le dossier $dossier contient $(ls -l | grep ^- | wc -l) fichiers(s)."
