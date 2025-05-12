@@ -5,7 +5,6 @@ condition=0
 while [ $condition -eq 0 ] 
 do
 read dossier
-echo ""
 if [ -d $dossier ]; then
 condition=1
 else
