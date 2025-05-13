@@ -6,4 +6,4 @@ do
     read dos
     dossier=$dos 
 done
-echo -e "\n Le dossier $dossier contient $(ls -p "$dossier" | grep -v '/$' | wc -l) fichier(s)."
+echo -e "\nLe dossier $dossier contient $(ls -p "$dossier" | grep -v '/$' | wc -l) fichier(s)."
