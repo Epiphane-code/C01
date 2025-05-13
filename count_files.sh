@@ -2,14 +2,11 @@
 # Ce code permet de compter de d'afficher le nombre des fichiers
 # variable dossier recupère le nom de base du repertoire courant
 condition=0
-while [ $condition -eq 0 ] 
-do
 read dossier
-if [ -d $dossier ]; then
-condition=1
-else
-condition=0
-fi
+while ![ -d $dossier ]
+do
+read new
+condition=$new
 done
 cd $dossier
 # variable 'nombre' recupère le nombre des fichiers reguliers
