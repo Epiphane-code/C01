@@ -1,10 +1,9 @@
 #!/bin/bash
-# Ce code permet de compter de d'afficher le nombre des fichiers dans un dossier
+echo "Entrez le nom du dossier"
 read dossier
 while [ ! -d $dossier ] 
 do
-read dos
-dossier=$dos 
+    read dos
+    dossier=$dos 
 done
-cd $dossier
-echo -e "\nLe nombre des fichiers dans $dossier est $(ls | wc -l)."
+echo "Le dossier $dossier contient $(ls -p "$dossier" | grep -v '/$' | wc -l) fichier(s)"
