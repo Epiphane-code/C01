@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "$@"
+echo ""$@""
 while [ $# -gt 0 ]
 do 
    n=$(($n+1))
