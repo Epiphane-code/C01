@@ -1,6 +1,9 @@
 #!/bin/bash
-echo ""$*"\n"
-echo ""
-echo "Argument 1: "$1"\n"
-echo ""
-echo "Argument 2: "$2""
+echo "$@"
+line=1
+while [ $# -gt 0 ]
+do 
+   echo "Argument $line: $1"
+   shift
+   line=$(($line+1))
+done
