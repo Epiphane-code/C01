@@ -1,4 +1,10 @@
 #!/bin/bash
 read dossier
 cd $dossier
-echo "Le dossier $dossier contient $(ls | wc -l) fichier(s)."
+nb=0
+for item in $(ls); do
+if [ -f $item ]; then
+nb=$(($nb+1))
+fi
+done
+echo "Le dossier $dossier contient $nb fichier(s)."
