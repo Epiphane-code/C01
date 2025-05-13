@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "$@"
-while [ $# -gt 0 ]
+while [ "$1" != "" ]
 do 
    n=$(($n+1))
    echo "Argument $n:"
