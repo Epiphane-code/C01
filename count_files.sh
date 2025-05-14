@@ -1,9 +1,9 @@
 #!/bin/bash
-read dossier
-nb=$(ls "$dossier" | wc -l)
+read myfolder
+nb=$(ls "$myfolder" | wc -l)
 if [ $nb -gt 0 ]; then
-echo "Le dossier "$dossier" contient "$nb" fichier(s)."
+echo "Le dossier "$myfolder" contient "$nb" fichier(s)."
 else
-echo "Le dossier "$dossier" contient 0 fichier(s)."
+echo "Le dossier "$myfolder" contient 0 fichier(s)."
 fi
 exit 0
