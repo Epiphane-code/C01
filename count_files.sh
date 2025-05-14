@@ -1,9 +1,8 @@
 #!/bin/bash
 read dossier
-nb=$(ls "$dossier" | wc -l )
+nb=$(ls "$dossier" | wc -l)
 if [ $nb -gt 0 ]; then
-nnb=$nb
+echo "Le dossier $dossier contient $nb fichier(s)."
 else
-nnb=0
+echo "Le dossier $dossier contient 0 fichier(s)."
 fi
-echo "Le dossier $dossier contient $nbb fichier(s)."
