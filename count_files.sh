@@ -1,8 +1,8 @@
 #!/bin/bash
 #  sorkho je te salue 😂
 # un script qui permet de compter le nombre des fichiers dans un dossier
-read myfolder
+read d
 # recuperer le nombre des fichiers dans une variable
-nb=$(ls -1 "$myfolder" | wc -l) 
+n=$(ls -1 "$d" | wc -l) 
 # affichage du resultat
-echo "Le dossier $myfolder contient $nb fichier(s)."
+echo " Le dossier $d contient $n fichier(s)."
