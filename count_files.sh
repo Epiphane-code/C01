@@ -1,4 +1,3 @@
 #!/bin/bash
 read dossier
-res=$(ls "$dossier" | wc -l)
-echo "Le dossier $dossier contient $res fichier(s)."
+echo "Le dossier $dossier contient $(ls "$dossier" | wc -l) fichier(s)."
