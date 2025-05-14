@@ -6,3 +6,4 @@ echo "Le dossier "$dossier" contient "$nb" fichier(s)."
 else
 echo "Le dossier "$dossier" contient 0 fichier(s)."
 fi
+exit 0
