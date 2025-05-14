@@ -5,4 +5,4 @@ read myfolder
 # recuperer le nombre des fichiers dans une variable
 nb=$(ls -1 "$myfolder" | wc -l) 
 # affichage du resultat
-echo "Le dossier "$myfolder" contient "$nb" fichier (s)."
+echo "Le dossier $myfolder contient $nb fichier(s)."
