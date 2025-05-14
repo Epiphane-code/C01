@@ -1,11 +1,8 @@
 #!/bin/bash
 read dossier
-cd $dossier
-res=$(
-for item in *; do
-if [ -f $item ]; then
-echo ""$item""
-fi 
-done | wc -l
-)
+while [ ! -d $dossier ]; do
+read dos
+dossier=$dos
+done
+res=$(ls "$dossier"| wc -l)
 echo "Le dossier $dossier contient $res fichier(s)."
