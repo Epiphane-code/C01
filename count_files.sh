@@ -8,4 +8,4 @@ echo ""$item""
 fi 
 done | wc -l
 )
-echo "Le dossier $dossier contient  $res fichier(s)."
+echo "Le dossier $dossier contient $res fichier(s)."
