@@ -1,11 +1,13 @@
 #!/bin/bash
 read a b op
+res=0
 if [ "$op" == "+" ]; then
-echo "Résultat : $(($a+$b))"
+res=$(($a+$b))
 elif [ "$op" == "-" ]; then
-echo "Résultat : $(($a-$b))"
+res=$(($a-$b))
 elif [ "$op" == "*" ]; then
-echo "Résultat : $(($a*$b))"
+res=$(($a*$b))
 else 
-echo "Résultat : $(($a/$b))"
+res=$(($a/$b))
 fi
+echo "Résultat : "$res""
