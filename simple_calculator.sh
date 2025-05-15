@@ -9,4 +9,4 @@ res=$(($a*$b))
 else
 res=$(($a/$b))
 fi
-echo "Résultat : $res"
+echo "Resultat : $res"
