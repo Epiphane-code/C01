@@ -1,8 +1,7 @@
 #!/bin/bash
-echo "$@"
+read -a args
 k=1
-while [ $# -gt 0 ]; do
-echo "Argument $k: $1"
-shift
+for i in "${args[@]}"; do
+echo "Argument $k: $i"
 k=$(($k+1))
 done
