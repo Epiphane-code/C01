@@ -1,3 +1,4 @@
 #!/bin/Bash
 #memoire total 
-df -h
+disk=$(df -h)
+echo "$disk"
