@@ -1,7 +1,7 @@
 #!/bin/bash
 # un script qui permet de compter le nombre des fichiers dans un dossier
-read dos
-#retourner le nombre des fichiers du dossier dos dans la variable nb
-nb=$(ls -1 "@dos" | wc -l)
-# affichage du resultat
-echo "Le dossier "$dos" contient $nb fichier(s)."
+read "dos"
+#acceder a dos
+ls -1 "$dos"
+compte=$(ls -1 "$dos" | wc -l)
+echo "Le dossier $dos contient $compte fichier(s)."
