@@ -1,5 +1,7 @@
 #!/bin/bash
 # un script qui permet de compter le nombre des fichiers dans un dossier
-read d
+read dos
+#retourner le nombre des fichiers du dossier dos dans la variable nb
+nb=$(ls -p $dos | grep -v / | wc -l)
 # affichage du resultat
-echo "Le dossier $d contient $(ls -p $d | grep -v / | wc -l) fichier(s)."
+echo "Le dossier $dos contient $nb fichier(s)."
