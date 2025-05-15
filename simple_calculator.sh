@@ -10,4 +10,4 @@ res=$(($a*$b))
 elif [ "$op" == "/" ]; then
 res=$(($a/$b))
 fi
-echo "Résultat : "$res""
+echo "Résultat :"$res""
