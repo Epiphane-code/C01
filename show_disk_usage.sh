@@ -1,2 +1,2 @@
 #!/bin/Bash
-df -h
+df-h
