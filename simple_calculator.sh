@@ -11,4 +11,5 @@ res=$(($a*$b))
 else
 res=$(($a/$b))
 fi
+echo ""
 echo "Résultat : $res"
