@@ -1,12 +1,7 @@
 #!/bin/bash
-#lire les arguments 
-read -a arg
-
-#inialiser le compteur 
-k=1
-
-#parcourir les arguments et les afficher
-for i in "${arg[@]}"; do
-  echo "Argument $k: $i"
-  ((k++))
+echo "$@"      #afficher tous les arguments separes sous une chaine
+k=1            #initialisation
+for i in $@; do
+echo "Argument $k: $i"
+k=$(($k+1))
 done
