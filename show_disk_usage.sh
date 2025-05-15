@@ -3,7 +3,9 @@
 df -h
 #utilisation
 for dir in /*; do
-    [ -d "$dir" ] && du -sh "$dir" 2>/dev/null
+    if [ -d "$dir" ]; then
+    du -sh "$dir" 2>/dev/null
+    fi
 done | sort -hr
 
 
