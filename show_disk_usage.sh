@@ -1,3 +1,2 @@
 #!/bin/Bash
-
-du
+df -h | du -sh
