@@ -1,9 +1,5 @@
 #!/bin/Bash
-echo -n "Mémoire totale:"
+#affiche la taille du mémoire 
 df -h
-echo -n "Utilisé :"
-for i in * ; do
-if [ -f $i ]; then 
-du -sh "$i"
-fi
-done 
+#affich l'utilisation du mémoire 
+du
