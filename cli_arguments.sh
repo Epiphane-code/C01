@@ -1,6 +1,8 @@
-#!/bin/bash 
-arg=("$@") 
+#!/bin/bash
 echo "$@"
-for i in ${!arg[@]}; do 
-echo "Argument $i: ${arg[$i]}"
-done                 
+k=1
+while [ $# -gt 0 ]; do
+echo "Argument $k: $1"
+shift
+k=$(($k+1))
+done
