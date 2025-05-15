@@ -4,6 +4,6 @@ df -h
 echo -n "Utilisé :"
 for i in * ; do
 if [ -f $i ]; then 
-du -sh
+du -sh "$i"
 fi
 done 
