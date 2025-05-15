@@ -1,9 +1,7 @@
 #!/bin/bash
 echo "$@"
-n=1
-while [ "$1" != "" ];
-do 
-   echo "Argument $n: $1"
-   shift
-   n=$(($n+1))
+k=1
+for i in "$@"; do
+Argument $k: $($k)
+k=$(($k+1))
 done
