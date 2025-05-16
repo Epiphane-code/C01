@@ -2,19 +2,18 @@
 read a b op
 case "$op" in
 "+")
-res=$($a+$b);;
+echo "Résultat : "$(($a+$b))"";;
 "-" )
-res=$($a-$b);;
+echo "Résultat : "$(($a-$b))"";;
 "/" )
 if [ $b -eq 0 ]; then
-res="Impossible"
+echo "Impossible"
 else
-res=$($a/$b)
+echo "Résultat : "$(($a/$b))""
 fi ;;
 \* )
-res=$($a*$b);;
+echo "Résultat : "$(($a*$b))"";;
 * )
-res="operation invalide";; 
+echo "Operateur invalide";; 
 esac
-echo "Résultat : "$res""
 exit 0
