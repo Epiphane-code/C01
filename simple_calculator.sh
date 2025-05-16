@@ -17,3 +17,4 @@ res=$(($a*$b));;
 res="operation invalide";; 
 esac
 echo "Résultat : "$res""
+exit 0
