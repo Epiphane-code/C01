@@ -6,13 +6,13 @@ res=$(($a+$b));;
 "-" )
 res=$(($a-$b));;
 "/" )
-res=$(($a/$b));;
-\* )
 if [ $b -eq 0 ]; then
 res="Impossible"
 else
-res=$(($a*$b))
-done;;
+res=$(($a/$b))
+fi ;;
+\* )
+res=$(($a*$b));;
 * )
 res="operation invalide";; 
 esac
