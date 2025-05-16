@@ -1,10 +1,5 @@
 #!/bin/bash
-  read folder
-  nb=$(
-  for item in $folder/*; do
-  if [ -f $item ]; then
-  ls $item
-  fi
-  done | wc -l
-  )
-  echo "Le dossier $folder contient $nb fichier(s)."
+
+read a b op
+res=$(echo "$a $op $b" | bc -l)
+echo "Résultat : $res"
