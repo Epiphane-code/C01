@@ -1,9 +1,4 @@
-read folder
-  nb=$(
-  for item in $folder/*; do
-  if [ -f $item ]; then
-  ls $item
-  fi
-  done | wc -l
-  )
+#!/bin/bash
+  read folder
+  nb=$(ls -l "$folder" | grep -v '^d' | wc -l)
   echo "Le dossier $folder contient $nb fichier(s)."
