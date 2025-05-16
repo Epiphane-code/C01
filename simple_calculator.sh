@@ -1,5 +1,15 @@
 #!/bin/bash
-
 read a b op
-res=$(echo "$a $op $b" | bc -l)
+case "$op" in
+"+")
+res=$(($a+$b));;
+"-" )
+res=$(($a-$b));;
+"/" )
+res=$(($a/$b));;
+\* )
+res=$(($a*$b));;
+* )
+res="operation invalide";; 
+esac
 echo "Résultat : $res"
