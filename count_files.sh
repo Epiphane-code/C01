@@ -1,4 +1,4 @@
 #!/bin/bash
   read folder
-  nb=$(ls -p "$folder" | grep -v / | wc -l)
+  nb=$(ls -1 "$folder" | wc -l)
   echo "Le dossier $folder contient $nb fichier(s)."
