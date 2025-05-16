@@ -1,19 +1,28 @@
 #!/bin/bash
-read a b op
+
+read  a b op
+
 case "$op" in
-"+")
-echo "Résultat : "$(($a+$b))"";;
-"-" )
-echo "Résultat : "$(($a-$b))"";;
-"/" )
-if [ $b -eq 0 ]; then
-echo "Impossible"
-else
-echo "Résultat : "$(($a/$b))""
-fi ;;
-\* )
-echo "Résultat : "$(($a*$b))"";;
-* )
-echo "Operateur invalide";; 
+  "+")
+    result=$((a + b))
+    ;;
+  "-")
+    result=$((a - b))
+    ;;
+  "*")
+    result=$((a * b))
+    ;;
+  "/")
+    if [ "$b" -eq 0 ]; then
+      echo "❌ Erreur : division par zéro"
+      exit 1
+    fi
+    result=$((a / b))
+    ;;
+  *)
+    echo "Opérateur invalide. Utilisez +, -, * ou /"
+    exit 1
+    ;;
 esac
-exit 0
+
+echo "Résultat : $result"
