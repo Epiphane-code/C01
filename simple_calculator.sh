@@ -2,14 +2,14 @@
 #Entrez les valeurs et un operateur
 read a b op
 #Instruction en fonction de l'operateur
-if [ "$op" == "+" ]; then
-res=$(($a+$b))
-elif [ "$op" == "-" ]; then
-res=$(($a-$b))
-elif [ "$op" == "*" ]; then
-res=$(($a*$b))
-else
-res=$(($a/$b))
-fi
-echo ""
+case $op in 
++)
+res=$(($a+$b));;
+-)
+res=$(($a-$b));;
+*)
+res=$(($a*$b));;
+/)
+res=$(($a/$b));;
+esac
 echo "Résultat : $res"
