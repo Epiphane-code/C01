@@ -1,28 +1,14 @@
 #!/bin/bash
-
-read  a b op
-
-case "$op" in
-  "+")
-    result=$((a + b))
-    ;;
-  "-")
-    result=$((a - b))
-    ;;
-  "*")
-    result=$((a * b))
-    ;;
-  "/")
-    if [ "$b" -eq 0 ]; then
-      echo "❌ Erreur : division par zéro"
-      exit 1
-    fi
-    result=$((a / b))
-    ;;
-  *)
-    echo "Opérateur invalide. Utilisez +, -, * ou /"
-    exit 1
-    ;;
-esac
-
-echo "Résultat : $result"
+#Demande à l'utilisateur d'entrer a,b,et opera
+read a b opera
+#Verification de Type d'operateur
+if [ "$opera" = "+" ]; then
+    resulta=$(($a + $b)) #Addition
+elif [ "$opera" = "-" ]; then
+    resulta=$(($a - $b)) #Soustraction
+elif [ "$opera" = "/" ]; then
+    resulta=$(($a / $b)) #Division
+elif [ "$opera" = "*" ]; then
+    resulta=$(($a * $b)) #Multiplication
+fi
+echo "Résultat : $resulta" #Resultat de
