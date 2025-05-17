@@ -1,4 +1,6 @@
 #!/bin/bash
   read folder
-  nb=$(ls -1 "$folder" | wc -l)
-  echo "Le dossier $folder contient $nb fichier(s)."
+  count=$(ls "$folder" | wc -l)
+  if [ "$count" ], then
+  echo "Le dossier $folder contient "$count" fichier(s)."
+  fi
